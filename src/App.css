@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
+
+body {
+  --twitter-color: #50b7f5;
+  --twitter-background: black;
+  --light-color: rgb(217, 217, 217);
+
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--twitter-background);
+  color: var(--light-color);
+  width: 80%;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.layout {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar {
+  flex: 0.3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.feed {
+  flex: 0.6;
+}
+.widgets {
+  flex: 0.3;
+}
+
+@media (max-width: 500px) {
+  body {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .layout {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+  }
+  .feed {
+    flex: 0.9;
+  }
+
+  .sidebar {
+    display: flex;
+    padding: 0;
+    flex: 0.1;
+  }
+  .widgets {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .widgets {
+    display: none;
   }
 }
