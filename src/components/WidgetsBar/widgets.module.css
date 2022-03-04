@@ -1,1 +1,29 @@
+.widgets_searchbar {
+  display: flex;
+  margin-left: 20px;
+  position: fixed;
+  width: 19%;
+  background-color: var(--twitter-background);
+}
 
+.widgets_input {
+  border: none;
+  width: 90%;
+  height: 2.65rem;
+  margin-top: 6px;
+  font-size: 15px;
+  background-color: var(--border-color);
+  border-radius: 0px 20px 20px 0px;
+  color: white;
+}
+
+.widgets_input:focus {
+  background-color: black;
+}
+
+.widgets_icon {
+  margin-top: 6px;
+  background-color: var(--border-color);
+  padding: 10px;
+  border-radius: 20px 0px 0px 20px;
+}

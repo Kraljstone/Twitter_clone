@@ -4,6 +4,7 @@ body {
   --twitter-color: #50b7f5;
   --twitter-background: black;
   --light-color: rgb(217, 217, 217);
+  --border-color: rgb(47, 51, 54);
 
   font-family: 'Roboto Mono', monospace;
   background-color: var(--twitter-background);
@@ -35,7 +36,7 @@ body {
 
 @media (max-width: 500px) {
   body {
-    width: 90%;
+    width: 95%;
   }
 
   .layout {

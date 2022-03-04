@@ -17,13 +17,16 @@ import Banner from './Banner/Banner';
 
 const Sidebar = () => {
   return (
-    <>
+    <div className={classes.sidebar_container}>
       <TwitterIcon className={classes.sidebar_twitter_logo} />
-      <SidebarOptions text={'Home'} Icon={HomeIcon} />
-      <SidebarOptions text={'Explore'} Icon={ExploreIcon} />
-      <SidebarOptions text={'Notification'} Icon={NotificationsNoneIcon} />
-      <SidebarOptions text={'Messages'} Icon={MailOutlineIcon} />
-      <div className={classes.sidebar_forDesktop}>
+      <div className={classes.sidebar_forMobile}>
+        <SidebarOptions text={'Home'} Icon={HomeIcon} />
+        <SidebarOptions text={'Explore'} Icon={ExploreIcon} />
+        <SidebarOptions text={'Notification'} Icon={NotificationsNoneIcon} />
+        <SidebarOptions text={'Messages'} Icon={MailOutlineIcon} />
+      </div>
+
+      <div className={classes.sidebar_withMoreOptions}>
         <SidebarOptions text={'Bookmarks'} Icon={BookmarkBorderOutlinedIcon} />
         <SidebarOptions text={'Lists'} Icon={SpeakerNotesOutlinedIcon} />
         <SidebarOptions text={'Profile'} Icon={PersonOutlineOutlinedIcon} />
@@ -31,7 +34,7 @@ const Sidebar = () => {
         <Button className={classes.sidebar_tweetButton}>Tweet</Button>
         <Banner />
       </div>
-    </>
+    </div>
   );
 };
 

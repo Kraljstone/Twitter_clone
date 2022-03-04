@@ -1,18 +1,19 @@
-.banner_grid {
+.banner_container {
   display: flex;
   align-items: center;
   margin-top: 4.5rem;
   margin-left: -12px;
   padding: 0.8rem 20px;
-  width: 100%;
+  width: 90%;
+  cursor: pointer;
 }
 
-.banner_grid:hover {
+.banner_container:hover {
   background-color: rgb(18, 18, 18);
   padding: 0.8rem 20px;
   border-radius: 40px;
   margin-left: -12px;
-  width: 80%;
+  width: 83%;
   cursor: pointer;
 }
 

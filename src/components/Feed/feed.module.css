@@ -1,0 +1,17 @@
+.feed_container {
+  border-right: 1px solid var(--border-color);
+}
+
+.feed_header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--twitter-background);
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.feed_header > h2 {
+  font-size: 20px;
+  font-weight: 800;
+}

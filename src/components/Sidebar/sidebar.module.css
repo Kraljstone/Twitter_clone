@@ -31,11 +31,27 @@
 }
 
 @media (max-width: 500px) {
-  .sidebar_forDesktop {
+  .sidebar_container {
+    position: fixed;
+  }
+  .sidebar_withMoreOptions {
     display: none;
   }
 
   .sidebar_twitter_logo {
     display: none !important;
   }
+
+  .sidebar_forMobile {
+    display: flex;
+    position: sticky;
+    bottom: 0;
+  }
+}
+
+.sidebar_container {
+  border-right: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  border: none;
 }
