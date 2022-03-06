@@ -4,6 +4,11 @@
 }
 .tweetBox_text {
   background-color: var(--twitter-background);
+  color: white;
+}
+
+.tweetBox_text:focus {
+  outline: none;
 }
 
 .tweetBox_input {

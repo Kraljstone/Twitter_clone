@@ -8,7 +8,7 @@ const Feed = () => {
       <div className={classes.feed_header}>
         <h2>Home</h2>
       </div>
-      <div>
+      <div className={classes.feed}>
         <TweetBox />
       </div>
     </div>

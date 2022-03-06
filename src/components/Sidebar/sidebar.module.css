@@ -1,3 +1,9 @@
+.sidebar_container {
+  border-right: 1px solid var(--border-color) !important;
+  position: sticky;
+  top: 0;
+  border: none;
+}
 .sidebar_twitter_logo {
   display: inline-block;
   transform: scale(1.5);
@@ -44,14 +50,11 @@
 
   .sidebar_forMobile {
     display: flex;
-    position: sticky;
+    position: fixed;
     bottom: 0;
+    left: 0;
+    background-color: black;
+    padding-top: 0.5rem;
+    padding-left: 3rem;
   }
-}
-
-.sidebar_container {
-  border-right: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  border: none;
 }

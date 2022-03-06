@@ -36,7 +36,7 @@ body {
 
 @media (max-width: 500px) {
   body {
-    width: 95%;
+    width: 90%;
   }
 
   .layout {
@@ -44,7 +44,6 @@ body {
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
   }
   .feed {
     flex: 0.9;

@@ -38,10 +38,6 @@
   .sidebarOptions_icons {
     margin: 0.8rem 0;
   }
-
-  .sidebarOptions_container:hover {
-    width: 11%;
-  }
 }
 
 @media (max-width: 500px) {
