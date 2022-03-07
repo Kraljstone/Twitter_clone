@@ -38,31 +38,6 @@ const Widgets = () => {
               tweets={trendInfo.value}
             />
           ))}
-          {/* <Trending
-            trendingName={'Digital assets'}
-            trendingAsset={'#crytocurrencies'}
-            tweets={'21.4k'}
-          />
-          <Trending
-            trendingName={'Trending in Serbia'}
-            trendingAsset={'Serbs'}
-            tweets={'1,980'}
-          />
-          <Trending
-            trendingName={'Technology'}
-            trendingAsset={'Elon'}
-            tweets={'102k'}
-          />
-          <Trending
-            trendingName={'Politics'}
-            trendingAsset={'USSR'}
-            tweets={'30.5k'}
-          />
-          <Trending
-            trendingName={'Gaming'}
-            trendingAsset={'Ubisoft'}
-            tweets={'11.4k'}
-          /> */}
         </div>
         <div className={classes.widgets_trandsMore}>
           <p>Show more</p>
