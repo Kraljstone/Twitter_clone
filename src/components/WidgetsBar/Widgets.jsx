@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import classes from './widgets.module.css';
 import SearchIcon from '@material-ui/icons/Search';
 import { FiSettings } from 'react-icons/fi';
 import Trending from './Trending/Trending';
+import db from '../firebase';
+import { collection, onSnapshot } from 'firebase/firestore';
 
 const Widgets = () => {
+  const [TrendsInfo, setTrendsInfo] = useState([
+    { name: 'Loading...', id: 'initial' },
+  ]);
+  useEffect(
+    () =>
+      onSnapshot(collection(db, 'Trends'), snapshot =>
+        setTrendsInfo(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })))
+      ),
+    []
+  );
+
   return (
     <div className={classes.widgets_container}>
       <div className={classes.widgets_searchbar}>
@@ -17,7 +30,15 @@ const Widgets = () => {
           <FiSettings className={classes.widgets_settings} />
         </div>
         <div className={classes.widges_items}>
-          <Trending
+          {TrendsInfo.map(trendInfo => (
+            <Trending
+              key={trendInfo.id}
+              trendingName={trendInfo.name}
+              trendingAsset={trendInfo.item}
+              tweets={trendInfo.value}
+            />
+          ))}
+          {/* <Trending
             trendingName={'Digital assets'}
             trendingAsset={'#crytocurrencies'}
             tweets={'21.4k'}
@@ -41,7 +62,7 @@ const Widgets = () => {
             trendingName={'Gaming'}
             trendingAsset={'Ubisoft'}
             tweets={'11.4k'}
-          />
+          /> */}
         </div>
         <div className={classes.widgets_trandsMore}>
           <p>Show more</p>
