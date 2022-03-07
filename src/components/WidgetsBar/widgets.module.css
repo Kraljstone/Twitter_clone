@@ -18,7 +18,7 @@
   height: 2.65rem;
   margin-top: 6px;
   font-size: 15px;
-  background-color: var(--border-color);
+  background-color: rgba(39, 39, 39, 0.89);
   border-radius: 0px 20px 20px 0px;
   color: white;
 }
@@ -29,16 +29,15 @@
 
 .widgets_icon {
   margin-top: 6px;
-  background-color: var(--border-color);
+  background-color: rgba(39, 39, 39, 0.89);
   padding: 10px;
   border-radius: 20px 0px 0px 20px;
 }
 
-.wigets_tranding {
+.wigets_trands {
   margin-top: 2.5rem;
-  background-color: var(--border-color);
-  padding: 0.2rem 1rem;
-  width: 90%;
+  background-color: rgba(39, 39, 39, 0.89);
+  width: 100%;
   margin-left: 1.2rem;
   margin-top: 5rem;
   border-radius: 20px;
@@ -46,8 +45,10 @@
 
 .widgets_heading {
   display: flex;
+  padding: 0.2rem 1rem;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: -10px;
 }
 
 .widgets_settings {
@@ -59,5 +60,16 @@
   border-radius: 50%;
   padding: 6px;
   background-color: rgb(67, 73, 78);
+  cursor: pointer;
+}
+
+.widgets_trandsMore {
+  padding: 0.2rem 1rem;
+  color: #1d9bf0;
+}
+
+.widgets_trandsMore:hover {
+  background-color: var(--border-color);
+  border-radius: 0 0 20px 20px;
   cursor: pointer;
 }

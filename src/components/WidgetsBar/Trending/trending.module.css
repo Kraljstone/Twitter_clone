@@ -1,0 +1,32 @@
+.trending_container {
+  line-height: 0.1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2rem 1rem;
+}
+
+.trending_container:hover {
+  background-color: var(--border-color);
+  cursor: pointer;
+}
+
+.trending_tweetsCounter {
+  font-size: 13px;
+  color: #6e767d;
+}
+
+.trending_heading {
+  color: #6e767d;
+}
+
+.trending_moreOptions {
+  color: #6e767d;
+  padding: 6px;
+}
+
+.trending_moreOptions:hover {
+  background-color: #444444;
+  padding: 6px;
+  border-radius: 50%;
+}
