@@ -6,7 +6,7 @@ import db from '../firebase';
 import { collection, onSnapshot } from 'firebase/firestore';
 
 const Feed = () => {
-  const [Posts, setPosts] = useState([{ name: 'Loading...', id: 'initial' }]);
+  const [Posts, setPosts] = useState([]);
 
   useEffect(
     () =>

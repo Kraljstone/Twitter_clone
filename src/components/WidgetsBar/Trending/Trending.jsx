@@ -6,9 +6,9 @@ const Trending = ({ trendingName, trendingAsset, tweets }) => {
   return (
     <div className={classes.trending_container}>
       <div>
-        <h5 className={classes.trending_heading}> {trendingName} - Trending</h5>
+        <h5 className={classes.trending_heading}> {trendingName}</h5>
         <h5>{trendingAsset}</h5>
-        <p className={classes.trending_tweetsCounter}>{tweets} Tweets</p>
+        <p className={classes.trending_tweetsCounter}>{tweets}</p>
       </div>
       <MoreHorizIcon className={classes.trending_moreOptions} />
     </div>

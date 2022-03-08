@@ -5,10 +5,11 @@ import { FiSettings } from 'react-icons/fi';
 import Trending from './Trending/Trending';
 import db from '../firebase';
 import { collection, onSnapshot } from 'firebase/firestore';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const Widgets = () => {
   const [TrendsInfo, setTrendsInfo] = useState([
-    { name: 'Loading...', id: 'initial' },
+    { name: <LoadingSpinner />, id: 'initial' },
   ]);
   useEffect(
     () =>
@@ -29,7 +30,7 @@ const Widgets = () => {
           <h3>Trends for you</h3>
           <FiSettings className={classes.widgets_settings} />
         </div>
-        <div className={classes.widges_items}>
+        <div>
           {TrendsInfo.map(trendInfo => (
             <Trending
               key={trendInfo.id}
