@@ -15,7 +15,7 @@ const FollowWidget = ({ avatar, name, username }) => {
           <h3 className={classes.followWidget_name}>
             <span className={classes.followWidget_nameText}>{name}</span>
           </h3>
-          <h5 className={classes.followWidget_username}>@{username}</h5>
+          <h5 className={classes.followWidget_username}>{username}</h5>
         </div>
       </div>
       <Button className={classes.followWidget_followButton}>Follow</Button>

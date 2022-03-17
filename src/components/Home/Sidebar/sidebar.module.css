@@ -36,9 +36,15 @@
   background-color: rgba(29, 156, 240, 0.863) !important;
 }
 
+.navLink {
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
 @media (max-width: 500px) {
   .sidebar_container {
-    position: fixed;
+    background-color: black;
+    z-index: 2;
   }
   .sidebar_withMoreOptions {
     display: none;
@@ -50,11 +56,12 @@
 
   .sidebar_forMobile {
     display: flex;
+    justify-content: center;
     position: fixed;
     bottom: 0;
     left: 0;
     background-color: black;
     padding-top: 0.5rem;
-    padding-left: 3rem;
+    width: 100%;
   }
 }
