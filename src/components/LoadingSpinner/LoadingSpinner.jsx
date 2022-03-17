@@ -4,7 +4,7 @@ import classes from './loadingSpinner.module.css';
 const LoadingSpinner = () => {
   return (
     <>
-      <div class={classes.ldsHourglass}></div>
+      <div className={classes.ldsHourglass}></div>
     </>
   );
 };

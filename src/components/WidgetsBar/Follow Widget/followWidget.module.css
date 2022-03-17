@@ -1,0 +1,47 @@
+.followWidget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+}
+
+.followWidget:hover {
+  background-color: var(--border-color);
+  cursor: pointer;
+}
+
+.followWidget_info {
+  line-height: 0;
+  display: flex;
+  align-items: center;
+}
+
+.followWidget_avatar {
+  transform: scale(1.2);
+}
+.followWidget_name {
+  font-size: 1rem;
+  padding: 0 15px;
+}
+
+.followWidget_nameText:hover {
+  text-decoration: underline;
+}
+
+.followWidget_username {
+  padding: 0 15px;
+  font-size: 0.9rem;
+  color: #6e767d;
+}
+
+.followWidget_followButton {
+  background-color: white !important;
+  border-radius: 20px !important;
+  padding: 6px 1rem !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+}
+
+.followWidget_followButton:hover {
+  background-color: #f5f5f5 !important;
+}
