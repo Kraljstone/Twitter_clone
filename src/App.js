@@ -1,14 +1,14 @@
 import './App.css';
 
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './components/Home/HomePage';
-import Explore from './components/Explore/Explore';
-import Notification from './components/Notification/Notification';
-import Messages from './components/Messages/Messages';
-import Bookmarks from './components/Bookmarks/Bookmarks';
-import Lists from './components/Lists/Lists';
-import Profile from './components/Profile/Profile';
-import More from './components/More/More';
+import HomePage from './Components/Pages/Home/HomePage';
+import Explore from './Components/Pages/Explore/Explore';
+import Notification from './Components/Pages/Notification/Notification';
+import Messages from './Components/Pages/Messages/Messages';
+import Bookmarks from './Components/Pages/Bookmarks/Bookmarks';
+import Lists from './Components/Pages/Lists/Lists';
+import Profile from './Components/Pages/Profile/Profile';
+import More from './Components/Pages/More/More';
 
 function App() {
   return (
