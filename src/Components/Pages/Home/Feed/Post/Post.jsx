@@ -5,6 +5,7 @@ import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PublishIcon from '@material-ui/icons/Publish';
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 const Post = ({ displayName, username, verified, text, image, avatar }) => {
   return (
@@ -24,12 +25,13 @@ const Post = ({ displayName, username, verified, text, image, avatar }) => {
                 @{username}
               </span>
             </h3>
+            <MoreHorizIcon className={classes.post_moreOptions} />
           </div>
           <div className={classes.post__headerDescription}>
             <p>{text}</p>
           </div>
         </div>
-        <img src={image} alt="img" />
+        <img src={image} alt="" />
         <div className={classes.post__footer}>
           <ChatBubbleOutlineIcon
             className={classes.post_icons}

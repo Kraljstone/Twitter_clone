@@ -30,6 +30,12 @@
   font-size: 15px;
 }
 
+.post__headerText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .post__headerText > h3 {
   font-size: 15px;
   margin-bottom: 5px;
@@ -66,4 +72,15 @@
     max-width: 250px;
     max-height: 250px;
   }
+}
+
+.post_moreOptions {
+  color: #6e767d;
+  padding: 6px;
+}
+
+.post_moreOptions:hover {
+  background-color: #444444;
+  padding: 6px;
+  border-radius: 50%;
 }

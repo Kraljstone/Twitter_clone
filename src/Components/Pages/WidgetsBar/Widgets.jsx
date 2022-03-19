@@ -3,7 +3,7 @@ import classes from './widgets.module.css';
 import SearchIcon from '@material-ui/icons/Search';
 import { FiSettings } from 'react-icons/fi';
 import Trending from './Trending/Trending';
-import db from '../../../Database/firebase';
+import { db } from '../../../Database/firebase';
 import { collection, onSnapshot } from 'firebase/firestore';
 import LoadingSpinner from '../Home/LoadingSpinner/LoadingSpinner';
 import FollowWidget from './Follow Widget/FollowWidget';
