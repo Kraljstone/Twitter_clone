@@ -14,6 +14,7 @@
 
 .feed {
   flex: 0.6;
+  border-right: 1px solid var(--border-color);
 }
 .widgets {
   flex: 0.3;
@@ -47,5 +48,13 @@
 @media (max-width: 768px) {
   .widgets {
     display: none;
+  }
+  .sidebar {
+    flex: 0.1;
+  }
+
+  .feed {
+    flex: 1;
+    border-right: 1px solid var(--border-color);
   }
 }

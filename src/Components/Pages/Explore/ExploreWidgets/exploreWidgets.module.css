@@ -1,21 +1,11 @@
-.widgets_container {
+.exploreWidgets_container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.widgets_searchbar {
-  display: flex;
-  position: fixed;
-  max-width: 20%;
-  margin-left: 1.4rem;
-  background-color: var(--twitter-background);
-  padding-bottom: 1.2rem;
-  padding-right: 2.5rem;
-  z-index: 100;
-}
 
-.widgets_input {
+.exploreWidgets_input {
   border: none;
   width: 16rem;
   height: 2.65rem;
@@ -26,27 +16,27 @@
   color: white;
 }
 
-.widgets_input:focus {
+.exploreWidgets_input:focus {
   background-color: black;
 }
 
-.widgets_icon {
+.exploreWidgets_icon {
   margin-top: 6px;
   background-color: rgba(39, 39, 39, 0.89);
   padding: 10px;
   border-radius: 20px 0px 0px 20px;
 }
 
-.wigets {
+.exploreWigets {
+  margin-top: 1rem;
   margin-bottom: -2.5rem;
   background-color: rgba(39, 39, 39, 0.89);
   width: 100%;
   margin-left: 1.2rem;
-  margin-top: 5rem;
   border-radius: 20px;
 }
 
-.widgets_heading {
+.exploreWidgets_heading {
   display: flex;
   padding: 0.2rem 1rem;
   justify-content: space-between;
@@ -54,24 +44,24 @@
   margin-bottom: -10px;
 }
 
-.widgets_settings {
+.exploreWidgets_settings {
   padding: 6px;
   transform: scale(1.2);
 }
 
-.widgets_settings:hover {
+.exploreWidgets_settings:hover {
   border-radius: 50%;
   padding: 6px;
   background-color: rgb(67, 73, 78);
   cursor: pointer;
 }
 
-.widgets_showMore {
+.exploreWidgets_showMore {
   padding: 0.2rem 1rem;
   color: #1d9bf0;
 }
 
-.widgets_showMore:hover {
+.exploreWidgets_showMore:hover {
   background-color: var(--border-color);
   border-radius: 0 0 20px 20px;
   cursor: pointer;

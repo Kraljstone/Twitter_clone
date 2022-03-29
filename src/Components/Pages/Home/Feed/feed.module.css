@@ -1,7 +1,3 @@
-.feed_container {
-  border-right: 1px solid var(--border-color);
-}
-
 .feed_header {
   position: sticky;
   top: 0;

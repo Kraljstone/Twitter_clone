@@ -14,7 +14,9 @@
   margin-left: 20px;
   margin-bottom: 6px;
 }
-
+.sidebar_tweetButtonIcon {
+  display: none;
+}
 .sidebar_twitter_logo:hover {
   background-color: rgb(18, 18, 18);
   border-radius: 50%;
@@ -63,5 +65,20 @@
     background-color: black;
     padding-top: 0.5rem;
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar_tweetButton {
+    width: 25%;
+  }
+
+  .sidebar_tweetButtonIcon {
+    display: inline-block;
+    transform: scale(1.5);
+  }
+
+  .sidebar_tweetButtonText {
+    display: none;
   }
 }

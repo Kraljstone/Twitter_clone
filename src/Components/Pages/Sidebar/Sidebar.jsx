@@ -2,6 +2,8 @@ import React from 'react';
 import classes from './sidebar.module.css';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import SidebarOptions from './SidebarOptions/SidebarOptions';
+import { FaFeatherAlt } from 'react-icons/fa';
+
 import {
   HomeIcon,
   ExploreIcon,
@@ -53,7 +55,12 @@ const Sidebar = () => {
         <NavLink to="/more" className={classes.navLink}>
           <SidebarOptions text={'More'} Icon={MoreHorizIcon} />
         </NavLink>
-        <Button className={classes.sidebar_tweetButton}>Tweet</Button>
+        <Button className={classes.sidebar_tweetButton}>
+          <span className={classes.sidebar_tweetButtonText}>Tweet </span>
+          <span className={classes.sidebar_tweetButtonIcon}>
+            <FaFeatherAlt />
+          </span>
+        </Button>
         <Banner />
       </div>
     </div>

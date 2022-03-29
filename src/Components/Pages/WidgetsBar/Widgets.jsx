@@ -6,7 +6,7 @@ import Trending from './Trending/Trending';
 import { db } from '../../../Database/firebase';
 import { collection, onSnapshot } from 'firebase/firestore';
 import LoadingSpinner from '../Home/LoadingSpinner/LoadingSpinner';
-import FollowWidget from './Follow Widget/FollowWidget';
+import FollowWidget from './FollowWidget/FollowWidget';
 
 const Widgets = () => {
   const [TrendsInfo, setTrendsInfo] = useState([
