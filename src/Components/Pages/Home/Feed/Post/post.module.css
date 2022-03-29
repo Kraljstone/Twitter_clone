@@ -5,6 +5,7 @@
   padding-bottom: 10px;
   cursor: pointer;
   width: 100%;
+  position: relative;
 }
 
 .post__body {

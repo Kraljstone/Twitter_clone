@@ -7,7 +7,7 @@
   max-width: 100%;
 }
 .explore_searchbar_avatar {
-  display: none;
+  display: none !important;
 }
 
 .explore_searchbar {
@@ -79,7 +79,7 @@
   }
 
   .explore_searchbar_avatar {
-    display: inline-block;
+    display: inline-block !important;
     margin-left: 1.2rem;
   }
 }

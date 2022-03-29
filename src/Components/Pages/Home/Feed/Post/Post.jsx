@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import classes from './post.module.css';
 import { Avatar } from '@material-ui/core';
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
@@ -6,8 +7,10 @@ import RepeatIcon from '@material-ui/icons/Repeat';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PublishIcon from '@material-ui/icons/Publish';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import DropDown from './DropDown/DropDown';
 
 const Post = ({ displayName, username, verified, text, image, avatar }) => {
+  const [option, setOptions] = useState(false);
   return (
     <div className={classes.post}>
       <div className={classes.post__avatar}>
@@ -25,7 +28,11 @@ const Post = ({ displayName, username, verified, text, image, avatar }) => {
                 @{username}
               </span>
             </h3>
-            <MoreHorizIcon className={classes.post_moreOptions} />
+            <MoreHorizIcon
+              className={classes.post_moreOptions}
+              onClick={() => setOptions(!option)}
+            />
+            {option && <DropDown />}
           </div>
           <div className={classes.post__headerDescription}>
             <p>{text}</p>
