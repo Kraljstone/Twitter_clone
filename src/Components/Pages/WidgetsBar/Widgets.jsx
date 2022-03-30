@@ -16,6 +16,8 @@ const Widgets = () => {
   const [FollowsInfo, setFollowsInfo] = useState([
     { name: <LoadingSpinner />, id: 'initial' },
   ]);
+
+  const [showMore, setShowMore] = useState(false);
   useEffect(
     () =>
       onSnapshot(collection(db, 'Trends'), snapshot =>
@@ -34,6 +36,15 @@ const Widgets = () => {
     []
   );
 
+  const showMoreHandler = () => {
+    if (showMore) {
+      setShowMore(false);
+    } else {
+      onSnapshot(collection(db, 'MoreTrends'), snapshot =>
+        setShowMore(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })))
+      );
+    }
+  };
   return (
     <div>
       <div className={classes.widgets_container}>
@@ -58,8 +69,17 @@ const Widgets = () => {
                 tweets={trendInfo.value}
               />
             ))}
+            {showMore &&
+              showMore.map(showMoreItem => (
+                <Trending
+                  key={showMoreItem.id}
+                  trendingName={showMoreItem.name}
+                  trendingAsset={showMoreItem.item}
+                  tweets={showMoreItem.value}
+                />
+              ))}
           </div>
-          <div className={classes.widgets_showMore}>
+          <div className={classes.widgets_showMore} onClick={showMoreHandler}>
             <p>Show more</p>
           </div>
         </div>
