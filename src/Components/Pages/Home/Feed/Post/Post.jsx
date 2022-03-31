@@ -34,7 +34,7 @@ const Post = ({ displayName, username, verified, text, image, avatar }) => {
             <MoreHorizIcon
               className={classes.post_moreOptions}
               onClick={() => {
-                setClose(!close);
+                setClose(true);
               }}
               ref={dropDownMenuRef}
             />

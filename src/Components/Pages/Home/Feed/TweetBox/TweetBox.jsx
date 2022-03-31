@@ -11,10 +11,16 @@ import {
 } from './index.js';
 import { db } from '../../../../../Database/firebase';
 import { addDoc, collection, serverTimestamp } from '@firebase/firestore';
+import 'emoji-mart/css/emoji-mart.css';
+import { Picker } from 'emoji-mart';
+import useOutsideClick from '../../../../../Hooks/useOutsideClick';
 
 const TweetBox = () => {
   const [input, setInput] = useState('');
   const filePickerRef = useRef(null);
+  const [emojiPicker, setEmojiPicker] = useState(false);
+  const emojiPickerMenuRef = useRef();
+  useOutsideClick(emojiPickerMenuRef, () => setEmojiPicker(false));
 
   const sendPost = async () => {
     await addDoc(collection(db, 'Post'), {
@@ -53,7 +59,23 @@ const TweetBox = () => {
             <ImageIcon />
             <GifIcon />
             <PollIcon />
-            <SentimentSatisfiedIcon />
+            <SentimentSatisfiedIcon
+              onClick={() => {
+                setEmojiPicker(!emojiPicker);
+              }}
+              ref={emojiPickerMenuRef}
+            />
+            {emojiPicker && (
+              <Picker
+                style={{
+                  position: 'absolute',
+                  zIndex: '5',
+                  width: '17rem',
+                  marginTop: '35px',
+                  backgroundColor: 'black',
+                }}
+              />
+            )}
             <ScheduleIcon />
             <LocationOnIcon />
           </div>
